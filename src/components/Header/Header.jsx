@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Container } from "reactstrap";
 import { NavLink, Link } from "react-router-dom";
 
@@ -25,6 +25,9 @@ const nav__links = [
 ];
 
 const Header = () => {
+  const menuRef = useRef(null);
+  const headerRef = useRef(null);
+  const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
   return (
     <header className="header">
       <Container>
@@ -37,7 +40,7 @@ const Header = () => {
           </Link>
 
           {/* ========== menu ========== */}
-          <div className="navigation">
+          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5">
               {nav__links.map((item, index) => (
                 <NavLink
@@ -54,7 +57,7 @@ const Header = () => {
           </div>
           {/* ======== nav right icons ========= */}
           <div className="nav__right d-flex align-items-center gap-4">
-            <span className="cart__icon">
+            <span className="cart__icon" onClick={toggleMenu}>
               <i class="ri-shopping-basket-line"></i>
               <span className="cart__badge">2</span>
             </span>
@@ -65,7 +68,7 @@ const Header = () => {
               </Link>
             </span>
 
-            <span className="mobile__menu">
+            <span className="mobile__menu" onClick={toggleMenu}>
               <i class="ri-menu-line"></i>
             </span>
           </div>
