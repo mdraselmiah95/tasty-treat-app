@@ -43,7 +43,7 @@ const Header = () => {
                   to={item.path}
                   key={index}
                   className={(navClass) =>
-                    navClass.isActive ? "active_menu" : ""
+                    navClass.isActive ? "active__menu" : ""
                   }
                 >
                   {item.display}
