@@ -27,7 +27,21 @@ const Footer = () => {
               </ListGroupItem>
             </ListGroup>
           </Col>
-          <Col lg="3" md="4" sm="6"></Col>
+          <Col lg="3" md="4" sm="6">
+            <h5 className="footer__title">Contact</h5>
+            <ListGroup className="deliver__time-list">
+              <ListGroupItem className=" delivery__time-item border-0 ps-0">
+                <p>Location: Dhaka, Bangladesh</p>
+              </ListGroupItem>
+              <ListGroupItem className=" delivery__time-item border-0 ps-0">
+                <span>Phone: +8801845515895</span>
+              </ListGroupItem>
+
+              <ListGroupItem className=" delivery__time-item border-0 ps-0">
+                <span>Email: dev.mdraselmia@gmail.com</span>
+              </ListGroupItem>
+            </ListGroup>
+          </Col>
           <Col lg="3" md="4" sm="6"></Col>
         </Row>
       </Container>
