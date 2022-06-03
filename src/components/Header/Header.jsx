@@ -1,7 +1,51 @@
 import React from "react";
+import { Container } from "reactstrap";
+import { NavLink, Link } from "react-router-dom";
+
+import logo from "../../assets/images/res-logo.png";
+
+const nav__links = [
+  {
+    display: "Home",
+    path: "/home",
+  },
+  {
+    display: "Foods",
+    path: "/foods",
+  },
+  {
+    display: "Cart",
+    path: "/cart",
+  },
+  {
+    display: "Contact",
+    path: "/contact",
+  },
+];
 
 const Header = () => {
-  return <div>Header</div>;
+  return (
+    <header className="header">
+      <Container>
+        <div className="nav__wrapper">
+          <div className="logo">
+            <img src={logo} alt="logo" />
+            <h5>Tasty Treat</h5>
+          </div>
+          {/* ========== menu ========== */}
+          <div className="navigation">
+            <div className="menu">
+              {nav__links.map((item, index) => (
+                <NavLink to={item.path} key={index}>
+                  {item.display}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Container>
+    </header>
+  );
 };
 
 export default Header;
