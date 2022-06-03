@@ -66,27 +66,30 @@ const Footer = () => {
             <div className="social__links d-flex align-items-center gap-4 justify-content-end">
               <p className="m-0">Follow: </p>
               <span>
-                <Link to="https://www.facebook.com/mdraselmiah15">
+                <a href="https://www.facebook.com/mdraselmiah15" target="blank">
                   <i class="ri-facebook-line"></i>
-                </Link>
+                </a>
               </span>
 
               <span>
-                <Link to="https://github.com/mdraselmiah95">
+                <a href="https://github.com/mdraselmiah95 " target="blank">
                   <i class="ri-github-line"></i>
-                </Link>
+                </a>
               </span>
 
               <span>
-                <Link to=" https://www.youtube.com/">
+                <a href=" https://www.youtube.com/" target="blank">
                   <i class="ri-youtube-line"></i>
-                </Link>
+                </a>
               </span>
 
               <span>
-                <Link to="https://www.linkedin.com/in/mdraselmiah15/">
+                <a
+                  href="https://www.linkedin.com/in/mdraselmiah15/"
+                  target="blank"
+                >
                   <i class="ri-linkedin-line"></i>
-                </Link>
+                </a>
               </span>
             </div>
           </Col>
