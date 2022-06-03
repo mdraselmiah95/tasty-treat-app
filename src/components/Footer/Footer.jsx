@@ -13,7 +13,20 @@ const Footer = () => {
               <h5>Tasty Treat</h5>
             </div>
           </Col>
-          <Col lg="3" md="4" sm="6"></Col>
+          <Col lg="3" md="4" sm="6">
+            <h5 className="footer__title">Delivery Time</h5>
+            <ListGroup className="deliver__time-list">
+              <ListGroupItem className=" delivery__time-item border-0 ps-0">
+                <span>Sunday - Thursday</span>
+                <p>10:00am - 11:00pm</p>
+              </ListGroupItem>
+
+              <ListGroupItem className=" delivery__time-item border-0 ps-0">
+                <span>Friday - Saturday</span>
+                <p>Off day</p>
+              </ListGroupItem>
+            </ListGroup>
+          </Col>
           <Col lg="3" md="4" sm="6"></Col>
           <Col lg="3" md="4" sm="6"></Col>
         </Row>
