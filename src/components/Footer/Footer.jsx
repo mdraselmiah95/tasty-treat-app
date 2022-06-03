@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
+import "../../styles/footer.css";
 
 const Footer = () => {
   return (
@@ -9,10 +10,12 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="3" md="4" sm="6">
-            <div className="footer__logo text-start">
-              <img src={logo} alt="logo" />
-              <h5>Tasty Treat</h5>
-            </div>
+            <Link to="/">
+              <div className="footer__logo text-start">
+                <img src={logo} alt="logo" />
+                <h5>Tasty Treat</h5>
+              </div>
+            </Link>
           </Col>
           <Col lg="3" md="4" sm="6">
             <h5 className="footer__title">Delivery Time</h5>
