@@ -10,12 +10,13 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="3" md="4" sm="6">
-            <Link to="/">
-              <div className="footer__logo text-start">
+            <div className="footer__logo text-start">
+              <Link to="/">
                 <img src={logo} alt="logo" />
                 <h5>Tasty Treat</h5>
-              </div>
-            </Link>
+              </Link>
+              <p>With the motto of “Food You’ll Love To Share”.</p>
+            </div>
           </Col>
           <Col lg="3" md="4" sm="6">
             <h5 className="footer__title">Delivery Time</h5>
@@ -42,7 +43,7 @@ const Footer = () => {
               </ListGroupItem>
 
               <ListGroupItem className=" delivery__time-item border-0 ps-0">
-                <span>Email: dev.mdraselmia@gmail.com</span>
+                <span> dev.mdraselmia@gmail.com</span>
               </ListGroupItem>
             </ListGroup>
           </Col>
@@ -68,7 +69,7 @@ const Footer = () => {
           {/* social link */}
           <Col lg="6" md="6">
             <div className="social__links d-flex align-items-center gap-4 justify-content-end">
-              <p className="m-0">Follow: </p>
+              {/* <p className="m-0">Follow: </p> */}
               <span>
                 <a href="https://www.facebook.com/mdraselmiah15" target="blank">
                   <i class="ri-facebook-line"></i>
