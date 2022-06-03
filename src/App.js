@@ -1,11 +1,8 @@
 import "./App.css";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  return (
-    <div className="App">
-      <h2>hi this is Rasel</h2>
-    </div>
-  );
+  return <Layout />;
 }
 
 export default App;
