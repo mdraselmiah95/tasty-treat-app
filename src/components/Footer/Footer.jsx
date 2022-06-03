@@ -65,6 +65,7 @@ const Footer = () => {
               Reserved.
             </p>
           </Col>
+          {/* social link */}
           <Col lg="6" md="6">
             <div className="social__links d-flex align-items-center gap-4 justify-content-end">
               <p className="m-0">Follow: </p>
