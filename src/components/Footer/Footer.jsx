@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="newsletter">
               <input type="email" placeholder="Enter your email" />
               <span>
-                <i class="ri-send-plane-line"></i>
+                <i className="ri-send-plane-line"></i>
               </span>
             </div>
           </Col>
@@ -72,19 +72,19 @@ const Footer = () => {
               {/* <p className="m-0">Follow: </p> */}
               <span>
                 <a href="https://www.facebook.com/mdraselmiah15" target="blank">
-                  <i class="ri-facebook-line"></i>
+                  <i className="ri-facebook-line"></i>
                 </a>
               </span>
 
               <span>
                 <a href="https://github.com/mdraselmiah95 " target="blank">
-                  <i class="ri-github-line"></i>
+                  <i className="ri-github-line"></i>
                 </a>
               </span>
 
               <span>
                 <a href=" https://www.youtube.com/" target="blank">
-                  <i class="ri-youtube-line"></i>
+                  <i className="ri-youtube-line"></i>
                 </a>
               </span>
 
@@ -93,7 +93,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/mdraselmiah15/"
                   target="blank"
                 >
-                  <i class="ri-linkedin-line"></i>
+                  <i className="ri-linkedin-line"></i>
                 </a>
               </span>
             </div>
