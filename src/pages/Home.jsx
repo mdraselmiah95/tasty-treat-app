@@ -18,17 +18,20 @@ import Category from "../components/UI/category/Category.jsx";
 //Fake Feature Data
 const featureData = [
   {
+    id: 1,
     title: "Quick Delivery",
     imgUrl: featureImg01,
     desc: "Super fast food delivery to your home or office ✓ Safe & easy payment options.",
   },
 
   {
+    id: 2,
     title: "Super Dine In",
     imgUrl: featureImg02,
     desc: "Again, feel free to eat fattier cuts of chicken if you're not eating many carbs.",
   },
   {
+    id: 3,
     title: "Easy Pick Up",
     imgUrl: featureImg03,
     desc: "we work with more than 18,00+ friendly local couriers to offer an easy and affordable.",
@@ -111,6 +114,22 @@ const Home = () => {
                 launched in 2013 to deliver your cravings at your doorsteps.
               </p>
             </Col>
+
+            {/* Feature and service */}
+
+            {featureData.map((item) => (
+              <Col lg="4" md="6" sm="6" key={item.id} className="mt-5">
+                <div className="feature__item text-center px-5 py-3">
+                  <img
+                    src={item.imgUrl}
+                    alt="feature-img"
+                    className="w-25 mb-3"
+                  />
+                  <h5 className=" fw-bold mb-3">{item.title}</h5>
+                  <p>{item.desc}</p>
+                </div>
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>
