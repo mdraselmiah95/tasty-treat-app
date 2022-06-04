@@ -2,6 +2,9 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+//Style CSS
+import "../../../styles/product-card.css";
+
 const ProductCard = ({ item }) => {
   const { id, title, image01, price } = item;
   return (

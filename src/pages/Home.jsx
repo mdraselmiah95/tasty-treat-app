@@ -175,7 +175,7 @@ const Home = () => {
             </Col>
 
             {products.map((item) => (
-              <Col lg="3" md="4" key={item.id}>
+              <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mt-5">
                 <ProductCard item={item} />
               </Col>
             ))}
