@@ -4,6 +4,8 @@ import Helmet from "../components/Helmet/Helmet";
 
 //images
 import heroImg from "../assets/images/hero.png";
+//CSS Style
+import "../styles/hero-section.css";
 
 const Home = () => {
   return (
