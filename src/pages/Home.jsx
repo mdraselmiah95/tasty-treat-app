@@ -5,12 +5,35 @@ import Helmet from "../components/Helmet/Helmet";
 
 //images
 import heroImg from "../assets/images/hero.png";
+import featureImg01 from "../assets/images/service-01.png";
+import featureImg02 from "../assets/images/service-02.png";
+import featureImg03 from "../assets/images/service-03.png";
 //CSS Style
 import "../styles/hero-section.css";
 import "../styles/home.css";
 
 //UI Category
 import Category from "../components/UI/category/Category.jsx";
+
+//Fake Feature Data
+const featureData = [
+  {
+    title: "Quick Delivery",
+    imgUrl: featureImg01,
+    desc: "Super fast food delivery to your home or office ✓ Safe & easy payment options.",
+  },
+
+  {
+    title: "Super Dine In",
+    imgUrl: featureImg02,
+    desc: "Again, feel free to eat fattier cuts of chicken if you're not eating many carbs.",
+  },
+  {
+    title: "Easy Pick Up",
+    imgUrl: featureImg03,
+    desc: "we work with more than 18,00+ friendly local couriers to offer an easy and affordable.",
+  },
+];
 
 const Home = () => {
   return (
