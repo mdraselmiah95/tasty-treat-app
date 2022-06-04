@@ -8,6 +8,7 @@ import heroImg from "../assets/images/hero.png";
 //CSS Style
 import "../styles/hero-section.css";
 
+//UI Category
 import Category from "../components/UI/category/Category.jsx";
 
 const Home = () => {
@@ -63,8 +64,31 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+      {/* UI Category Section */}
       <section className="pt-0">
         <Category />
+      </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center">
+              <h5 className="feature__subtitle mb-4">What we serve</h5>
+              <h2 className="feature__title">Just sit back at home</h2>
+              <h2 className="feature__title">
+                we will <span>take care</span>
+              </h2>
+              <p className="mb-1 mt-4 feature__text">
+                Tasty Treat is a 100% Halal online food ordering and delivery
+                service
+              </p>
+              <p className="feature__text">
+                launched in 2013 to deliver your cravings at your doorsteps.
+              </p>
+            </Col>
+          </Row>
+        </Container>
       </section>
     </Helmet>
   );
