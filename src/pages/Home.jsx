@@ -91,12 +91,10 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-
       {/* UI Category Section */}
       <section className="pt-0">
         <Category />
       </section>
-
       <section>
         <Container>
           <Row>
@@ -130,6 +128,22 @@ const Home = () => {
                 </div>
               </Col>
             ))}
+          </Row>
+        </Container>
+      </section>
+
+      {/* Popular Foods */}
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center">
+              <h2>Popular Foods</h2>
+            </Col>
+
+            <Col lg="12">
+              <div className="food__category"></div>
+            </Col>
           </Row>
         </Container>
       </section>
