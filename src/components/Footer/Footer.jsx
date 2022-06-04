@@ -68,7 +68,7 @@ const Footer = () => {
           </Col>
           {/* social link */}
           <Col lg="6" md="6">
-            <div className="social__links d-flex align-items-center gap-4 justify-content-end">
+            <div className="social__links d-flex align-items-center gap-4 justify-content-md-end justify-content-center">
               {/* <p className="m-0">Follow: </p> */}
               <span>
                 <a href="https://www.facebook.com/mdraselmiah15" target="blank">
