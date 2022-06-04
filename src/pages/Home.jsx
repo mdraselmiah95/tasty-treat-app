@@ -7,6 +7,7 @@ import Helmet from "../components/Helmet/Helmet";
 import heroImg from "../assets/images/hero.png";
 //CSS Style
 import "../styles/hero-section.css";
+import "../styles/home.css";
 
 //UI Category
 import Category from "../components/UI/category/Category.jsx";
