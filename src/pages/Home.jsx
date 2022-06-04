@@ -8,6 +8,8 @@ import heroImg from "../assets/images/hero.png";
 //CSS Style
 import "../styles/hero-section.css";
 
+import Category from "../components/UI/category/Category.jsx";
+
 const Home = () => {
   return (
     <Helmet title="Home">
@@ -60,6 +62,9 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
+      </section>
+      <section className="pt-0">
+        <Category />
       </section>
     </Helmet>
   );
