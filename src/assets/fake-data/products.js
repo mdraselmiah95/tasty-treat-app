@@ -50,7 +50,7 @@ const products = [
 
   {
     id: "03",
-    title: "Double Cheese Margherita",
+    title: "Cheese Margherita",
     price: 110.0,
     image01: product_03_image_01,
     image02: product_03_image_02,
@@ -62,7 +62,7 @@ const products = [
 
   {
     id: "04",
-    title: "Maxican Green Wave",
+    title: "Mexican Green Wave",
     price: 110.0,
     image01: product_04_image_01,
     image02: product_04_image_02,
