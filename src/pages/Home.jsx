@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
+import { Link } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
 
 //images
@@ -24,6 +25,32 @@ const Home = () => {
                   We are passionate about food and are always prompt to deliver
                   whenever the radar blips hungry.
                 </p>
+
+                <div className="hero__btns d-flex align-items-center gap-5 mt-4">
+                  <button className="order__btn d-flex align-items-center justify-content-between">
+                    Order now <i className="ri-arrow-right-s-line"></i>
+                  </button>
+
+                  <button className="all__foods-btn">
+                    <Link to="/foods">See all foods</Link>
+                  </button>
+                </div>
+
+                <div className=" hero__service  d-flex align-items-center gap-5 mt-5 ">
+                  <p className=" d-flex align-items-center gap-2 ">
+                    <span className="shipping__icon">
+                      <i className="ri-car-line"></i>
+                    </span>
+                    No shipping charge
+                  </p>
+
+                  <p className=" d-flex align-items-center gap-2 ">
+                    <span className="shipping__icon">
+                      <i className="ri-shield-check-line"></i>
+                    </span>
+                    100% secure checkout
+                  </p>
+                </div>
               </div>
             </Col>
             <Col lg="6" md="6">
