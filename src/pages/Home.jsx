@@ -15,6 +15,17 @@ import "../styles/home.css";
 //UI Category
 import Category from "../components/UI/category/Category.jsx";
 
+//Popular Food resources
+
+//Fake Api
+import products from "../assets/fake-data/products.js";
+
+//button images
+
+import foodCategoryImg01 from "../assets/images/hamburger.png";
+import foodCategoryImg02 from "../assets/images/pizza.png";
+import foodCategoryImg03 from "../assets/images/bread.png";
+
 //Fake Feature Data
 const featureData = [
   {
@@ -142,7 +153,24 @@ const Home = () => {
             </Col>
 
             <Col lg="12">
-              <div className="food__category"></div>
+              <div className="food__category d-flex align-items-center justify-content-center gap-4">
+                <button className="all__btn">All</button>
+
+                <button>
+                  <img src={foodCategoryImg01} alt="Burger" />
+                  Burger
+                </button>
+
+                <button>
+                  <img src={foodCategoryImg02} alt="Pizza" />
+                  Pizza
+                </button>
+
+                <button>
+                  <img src={foodCategoryImg03} alt="Bread" />
+                  Bread
+                </button>
+              </div>
             </Col>
           </Row>
         </Container>
