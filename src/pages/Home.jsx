@@ -25,6 +25,7 @@ import products from "../assets/fake-data/products.js";
 import foodCategoryImg01 from "../assets/images/hamburger.png";
 import foodCategoryImg02 from "../assets/images/pizza.png";
 import foodCategoryImg03 from "../assets/images/bread.png";
+import ProductCard from "../components/UI/product-card/ProductCard";
 
 //Fake Feature Data
 const featureData = [
@@ -156,22 +157,28 @@ const Home = () => {
               <div className="food__category d-flex align-items-center justify-content-center gap-4">
                 <button className="all__btn">All</button>
 
-                <button>
+                <button className=" d-flex align-items-center gap-2">
                   <img src={foodCategoryImg01} alt="Burger" />
                   Burger
                 </button>
 
-                <button>
+                <button className=" d-flex align-items-center gap-2">
                   <img src={foodCategoryImg02} alt="Pizza" />
                   Pizza
                 </button>
 
-                <button>
+                <button className=" d-flex align-items-center gap-2">
                   <img src={foodCategoryImg03} alt="Bread" />
                   Bread
                 </button>
               </div>
             </Col>
+
+            {products.map((item) => (
+              <Col lg="3" md="4" key={item.id}>
+                <ProductCard item={item} />
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>
