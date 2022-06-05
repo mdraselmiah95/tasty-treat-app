@@ -179,12 +179,19 @@ const Home = () => {
 
             <Col lg="12">
               <div className="food__category d-flex align-items-center justify-content-center gap-4">
-                <button className="all__btn" onClick={() => setCategory("ALL")}>
+                <button
+                  className={`all__btn ${
+                    category === "ALL" ? "foodBtnActive" : ""
+                  }`}
+                  onClick={() => setCategory("ALL")}
+                >
                   All
                 </button>
 
                 <button
-                  className=" d-flex align-items-center gap-2"
+                  className={`d-flex align-items-center gap-2 ${
+                    category === "BURGER" ? "foodBtnActive" : ""
+                  }`}
                   onClick={() => setCategory("BURGER")}
                 >
                   <img src={foodCategoryImg01} alt="Burger" />
@@ -192,7 +199,9 @@ const Home = () => {
                 </button>
 
                 <button
-                  className=" d-flex align-items-center gap-2"
+                  className={`d-flex align-items-center gap-2 ${
+                    category === "PIZZA" ? "foodBtnActive" : ""
+                  }`}
                   onClick={() => setCategory("PIZZA")}
                 >
                   <img src={foodCategoryImg02} alt="Pizza" />
@@ -200,7 +209,9 @@ const Home = () => {
                 </button>
 
                 <button
-                  className=" d-flex align-items-center gap-2"
+                  className={`d-flex align-items-center gap-2 ${
+                    category === "BREAD" ? "foodBtnActive" : ""
+                  }`}
                   onClick={() => setCategory("BREAD")}
                 >
                   <img src={foodCategoryImg03} alt="Bread" />
