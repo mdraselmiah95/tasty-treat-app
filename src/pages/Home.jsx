@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
@@ -51,6 +51,30 @@ const featureData = [
 ];
 
 const Home = () => {
+  const [category, setCategory] = useState("ALL");
+  const [allProducts, setAllProducts] = useState(products);
+
+  useEffect(() => {
+    if (category === "ALL") {
+      setAllProducts(products);
+    } else if (category === "BURGER") {
+      const filteredProducts = products.filter(
+        (product) => product.category === "Burger"
+      );
+      setAllProducts(filteredProducts);
+    } else if (category === "PIZZA") {
+      const filteredProducts = products.filter(
+        (product) => product.category === "Pizza"
+      );
+      setAllProducts(filteredProducts);
+    } else if (category === "BREAD") {
+      const filteredProducts = products.filter(
+        (product) => product.category === "Bread"
+      );
+      setAllProducts(filteredProducts);
+    }
+  }, []);
+
   return (
     <Helmet title="Home">
       <section>
