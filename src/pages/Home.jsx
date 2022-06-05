@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, ListGroup, ListGroupItem, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
+import TestimonialSlider from "../components/UI/TestimonialSlider/TestimonialSlider";
 
 //images
 import heroImg from "../assets/images/hero.png";
@@ -336,7 +337,7 @@ const Home = () => {
                   saying about us.
                 </p>
 
-                {/* <TestimonialSlider /> */}
+                <TestimonialSlider />
               </div>
             </Col>
 
