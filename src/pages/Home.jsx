@@ -267,22 +267,26 @@ const Home = () => {
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i> Quality support
+                      <i className="ri-checkbox-circle-line"></i> Quality
+                      support
                     </p>
                     <p className="choose__us-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui, earum.
+                      Currently, we are operating with 1200+ employees and we
+                      would like to create employment opportunities for more
+                      than 100,000 people all over the Country, thus helping
+                      best Quality support.
                     </p>
                   </ListGroupItem>
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i>Order from any
-                      location{" "}
+                      <i className="ri-checkbox-circle-line"></i>Order from any
+                      location
                     </p>
                     <p className="choose__us-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui, earum.
+                      Tasty Treat has more than 200+ outlets all over the
+                      country that ensures that delicious food is available
+                      throughout the country.
                     </p>
                   </ListGroupItem>
                 </ListGroup>
