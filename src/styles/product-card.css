@@ -47,6 +47,11 @@
   }
   .addTOCart__btn {
     padding: 5px 15px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
+/* @media only screen and (max-width: 768px) {
+  .addTOCart__btn {
+    padding: 8px 14px;
+  }
+} */
