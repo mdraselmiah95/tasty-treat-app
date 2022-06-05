@@ -8,6 +8,17 @@ import heroImg from "../assets/images/hero.png";
 import featureImg01 from "../assets/images/service-01.png";
 import featureImg02 from "../assets/images/service-02.png";
 import featureImg03 from "../assets/images/service-03.png";
+
+//Why Tasty Treat? image
+import whyImg from "../assets/images/location.png";
+
+//button images
+
+import foodCategoryImg01 from "../assets/images/hamburger.png";
+import foodCategoryImg02 from "../assets/images/pizza.png";
+import foodCategoryImg03 from "../assets/images/bread.png";
+import ProductCard from "../components/UI/product-card/ProductCard";
+
 //CSS Style
 import "../styles/hero-section.css";
 import "../styles/home.css";
@@ -19,13 +30,6 @@ import Category from "../components/UI/category/Category.jsx";
 
 //Fake Api
 import products from "../assets/fake-data/products.js";
-
-//button images
-
-import foodCategoryImg01 from "../assets/images/hamburger.png";
-import foodCategoryImg02 from "../assets/images/pizza.png";
-import foodCategoryImg03 from "../assets/images/bread.png";
-import ProductCard from "../components/UI/product-card/ProductCard";
 
 //Fake Feature Data
 const featureData = [
@@ -225,6 +229,18 @@ const Home = () => {
                 <ProductCard item={item} />
               </Col>
             ))}
+          </Row>
+        </Container>
+      </section>
+
+      {/* Why we choose you */}
+
+      <section className="why__choose-us">
+        <Container>
+          <Row>
+            <Col lg="6" md="6">
+              <img src={whyImg} alt="why-tasty-treat" className="w-100" />
+            </Col>
           </Row>
         </Container>
       </section>
