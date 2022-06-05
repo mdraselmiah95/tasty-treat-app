@@ -23,10 +23,12 @@ const TestimonialSlider = () => {
     <Slider {...settings}>
       <div>
         <p className="review__text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          atque, quam minus totam maiores laborum! Impedit consectetur illum
-          aliquid odit. Odit dolore ipsum quod debitis nostrum necessitatibus
-          quis dolorem quas!"
+          “Walked in for dinner in a Wednesday night and sat at the bar. The
+          bartender, Erin, couldn’t have been nicer. She was quick, efficient
+          and friendly. She helped recommend something for my dinner and the
+          Lobster Florentine didn’t disappoint! I even returned the next morning
+          for breakfast and got similar service! It was a gem I found and can’t
+          wait to return next year- I just hope Erin is still bartending then!”
         </p>
         <div className=" slider__content d-flex align-items-center gap-3 ">
           <img src={image1} alt="avatar" className=" rounded" />
@@ -35,10 +37,10 @@ const TestimonialSlider = () => {
       </div>
       <div>
         <p className="review__text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          atque, quam minus totam maiores laborum! Impedit consectetur illum
-          aliquid odit. Odit dolore ipsum quod debitis nostrum necessitatibus
-          quis dolorem quas!"
+          “Normally wings are wings, but theirs are lean meaty and tender, and
+          delicious homemade teriaki glaze. Gluten free pizza way better than
+          most. Great wait staff too. Came here after finding the best gluten
+          free muffins anywhere.”
         </p>
         <div className="slider__content d-flex align-items-center gap-3 ">
           <img src={image2} alt="avatar" className=" rounded" />
@@ -47,10 +49,9 @@ const TestimonialSlider = () => {
       </div>
       <div>
         <p className="review__text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          atque, quam minus totam maiores laborum! Impedit consectetur illum
-          aliquid odit. Odit dolore ipsum quod debitis nostrum necessitatibus
-          quis dolorem quas!"
+          “Great pizza, mozzarella sticks, calamari, chicken tenders, I could go
+          on. Everything we’ve tried here has been amazing. The staff is always
+          so friendly and accommodating.”
         </p>
         <div className="slider__content d-flex align-items-center gap-3 ">
           <img src={image3} alt="avatar" className=" rounded" />
