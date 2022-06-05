@@ -171,9 +171,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-
       {/* Popular Foods */}
-
       <section>
         <Container>
           <Row>
@@ -232,9 +230,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-
       {/* Why we choose you */}
-
       <section className="why__choose-us">
         <Container>
           <Row>
@@ -291,6 +287,16 @@ const Home = () => {
                   </ListGroupItem>
                 </ListGroup>
               </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      {/* Hot Pizza section */}
+      <section className="pt-0">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5 ">
+              <h2>Hot Pizza</h2>
             </Col>
           </Row>
         </Container>
