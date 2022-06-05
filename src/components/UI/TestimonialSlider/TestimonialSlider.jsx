@@ -5,6 +5,8 @@ import image1 from "../../../assets/images/ava-1.jpg";
 import image2 from "../../../assets/images/ava-2.jpg";
 import image3 from "../../../assets/images/ava-3.jpg";
 
+import "../../../styles/TestimonialSlider.css";
+
 const TestimonialSlider = () => {
   const settings = {
     dots: true,
