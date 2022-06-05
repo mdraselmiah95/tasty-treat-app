@@ -58,6 +58,17 @@ const Home = () => {
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
+  // Hot Pizza
+  const [hotPizza, setHotPizza] = useState([]);
+
+  useEffect(() => {
+    const filteredPizza = products.filter(
+      (pizza) => pizza.category === "Pizza"
+    );
+    const slicePizza = filteredPizza.slice(0, 4);
+    setHotPizza(slicePizza);
+  }, []);
+
   useEffect(() => {
     if (category === "ALL") {
       setAllProducts(products);
