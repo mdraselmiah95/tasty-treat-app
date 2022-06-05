@@ -23,12 +23,9 @@ const TestimonialSlider = () => {
     <Slider {...settings}>
       <div>
         <p className="review__text">
-          “Walked in for dinner in a Wednesday night and sat at the bar. The
-          bartender, Erin, couldn’t have been nicer. She was quick, efficient
-          and friendly. She helped recommend something for my dinner and the
-          Lobster Florentine didn’t disappoint! I even returned the next morning
-          for breakfast and got similar service! It was a gem I found and can’t
-          wait to return next year- I just hope Erin is still bartending then!”
+          "Food was fresh, the corned beef hash is amazing and homemade, even
+          the toast was good! Oh, and the potato pancakes! Everything we ordered
+          was fresh and delicious. Highly recommend! Definitely coming back.”
         </p>
         <div className=" slider__content d-flex align-items-center gap-3 ">
           <img src={image1} alt="avatar" className=" rounded" />
