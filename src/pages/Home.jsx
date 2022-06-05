@@ -248,21 +248,20 @@ const Home = () => {
                   Why <span>Tasty Treat?</span>
                 </h2>
                 <p className="tasty__treat-desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolorum, minus. Tempora reprehenderit a corporis velit,
-                  laboriosam vitae ullam, repellat illo sequi odio esse iste
-                  fugiat dolor, optio incidunt eligendi deleniti!
+                  With the motto of “Food You’ll Love To Share”, Tasty Treat not
+                  only hopes to bring amazing food at an affordable price but
+                  also wants to share and spread happiness with others.
                 </p>
 
                 <ListGroup className="mt-4">
                   <ListGroupItem className="border-0 ps-0">
                     <p className=" choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i> Fresh and tasty
-                      foods
+                      <i className="ri-checkbox-circle-line"></i> Fresh and
+                      tasty foods
                     </p>
                     <p className="choose__us-desc">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quia, voluptatibus.
+                      Tasty Treat spreads positivity and happiness by providing
+                      the best quality food at your convenience.
                     </p>
                   </ListGroupItem>
 
