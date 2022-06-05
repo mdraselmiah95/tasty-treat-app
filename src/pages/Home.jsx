@@ -12,6 +12,9 @@ import featureImg03 from "../assets/images/service-03.png";
 //Why Tasty Treat? image
 import whyImg from "../assets/images/location.png";
 
+//testimonial image
+import networkImg from "../assets/images/network.png";
+
 //button images
 
 import foodCategoryImg01 from "../assets/images/hamburger.png";
@@ -314,6 +317,16 @@ const Home = () => {
                 <ProductCard item={item} />
               </Col>
             ))}
+          </Row>
+        </Container>
+      </section>
+      {/* Testimonial */}
+      <section>
+        <Container>
+          <Row>
+            <Col lg="6" md="6">
+              <img src={networkImg} alt="testimonial-img" className="w-100" />
+            </Col>
           </Row>
         </Container>
       </section>
