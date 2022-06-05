@@ -309,6 +309,11 @@ const Home = () => {
             <Col lg="12" className="text-center mb-5 ">
               <h2>Hot Pizza</h2>
             </Col>
+            {hotPizza.map((item) => (
+              <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
+                <ProductCard item={item} />
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>
