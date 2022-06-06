@@ -17,6 +17,16 @@ const cartSlice = {
         (item) => item.id === newItem.id
       );
       state.totalQuantity++;
+      if (!existingItem) {
+        state.cartItems.push({
+          id: newItem.id,
+          title: newItem.title,
+          image01: newItem.image01,
+          price: newItem.price,
+          quantity: 1,
+          totalPrice: newItem.price,
+        });
+      }
     },
   },
 };
