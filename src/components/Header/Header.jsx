@@ -29,6 +29,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
 
+  //NavBar Scroll effect
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (
