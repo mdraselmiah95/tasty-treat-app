@@ -1,12 +1,26 @@
 import React from "react";
 import { ListGroup } from "reactstrap";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../../store/shopping-cart/cartSlice";
 
 //Style CSS
 import "../../../styles/cart-item.css";
 
 const CartItem = ({ product }) => {
-  const { title, image01, quantity, totalPrice } = product;
-  console.log(product);
+  const { id, price, title, image01, quantity, totalPrice } = product;
+
+  const dispatch = useDispatch();
+
+  const incrementItem = () => {
+    dispatch(
+      cartActions.addItem({
+        id,
+        title,
+        price,
+        image01,
+      })
+    );
+  };
   return (
     <ListGroup className="border-0 cart__item py-2 px-3">
       <div className="cart__item-info d-flex gap-3">
@@ -18,7 +32,7 @@ const CartItem = ({ product }) => {
               {quantity}x <span>${totalPrice}</span>
             </p>
             <div className=" d-flex align-items-center justify-content-between increase__decrease-btn">
-              <span className="increase__btn">
+              <span className="increase__btn" onClick={incrementItem}>
                 <i className="ri-add-line"></i>
               </span>
               <span className="quantity">{quantity}</span>
