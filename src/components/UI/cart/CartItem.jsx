@@ -2,6 +2,8 @@ import React from "react";
 import { ListGroup } from "reactstrap";
 
 import image from "../../../assets/images/product_01.1.jpg";
+//Style CSS
+import "../../../styles/cart-item.css";
 
 const CartItem = () => {
   return (
