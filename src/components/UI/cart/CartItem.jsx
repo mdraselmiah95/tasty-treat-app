@@ -26,6 +26,10 @@ const CartItem = ({ product }) => {
     dispatch(cartActions.removeItem(id));
   };
 
+  const deleteItem = () => {
+    dispatch(cartActions.deleteItem(id));
+  };
+
   return (
     <ListGroup className="border-0 cart__item py-2 px-3">
       <div className="cart__item-info d-flex gap-3">
@@ -46,7 +50,7 @@ const CartItem = ({ product }) => {
               </span>
             </div>
           </div>
-          <span className="delete__btn">
+          <span className="delete__btn" onClick={deleteItem}>
             <i className="ri-close-line"></i>
           </span>
         </div>
