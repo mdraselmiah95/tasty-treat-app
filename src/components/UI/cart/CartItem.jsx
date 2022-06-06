@@ -23,7 +23,7 @@ const CartItem = ({ product }) => {
   };
 
   const decrementItem = () => {
-    dispatch(cartActions.removeItem());
+    dispatch(cartActions.removeItem(id));
   };
 
   return (
