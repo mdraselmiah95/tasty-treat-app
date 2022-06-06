@@ -12,4 +12,4 @@ const cartUiSlice = createSlice({
 });
 
 export const cartAction = cartUiSlice.actions;
-export default cartUiSlice;
+export default cartUiSlice.reducer;
