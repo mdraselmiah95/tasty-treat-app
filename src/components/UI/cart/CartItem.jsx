@@ -21,6 +21,11 @@ const CartItem = ({ product }) => {
       })
     );
   };
+
+  const decrementItem = () => {
+    dispatch(cartActions.removeItem());
+  };
+
   return (
     <ListGroup className="border-0 cart__item py-2 px-3">
       <div className="cart__item-info d-flex gap-3">
@@ -36,7 +41,7 @@ const CartItem = ({ product }) => {
                 <i className="ri-add-line"></i>
               </span>
               <span className="quantity">{quantity}</span>
-              <span className="decrease__btn">
+              <span className="decrease__btn" onClick={decrementItem}>
                 <i className="ri-subtract-line"></i>
               </span>
             </div>
