@@ -25,8 +25,13 @@ const Carts = () => {
           </span>
         </div>
         <div className="cart__item-list">
-          {}
-          <CartItem />
+          {cartProducts.length === 0 ? (
+            <h6 className="text-center mt-5">No item added to the cart</h6>
+          ) : (
+            cartProducts.map((product, index) => (
+              <CartItem product={product} key={index} />
+            ))
+          )}
         </div>
         <div className="cart__bottom d-flex align-items-center justify-content-between">
           <h6>

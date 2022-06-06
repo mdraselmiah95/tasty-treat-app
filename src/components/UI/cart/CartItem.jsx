@@ -5,7 +5,8 @@ import image from "../../../assets/images/product_01.1.jpg";
 //Style CSS
 import "../../../styles/cart-item.css";
 
-const CartItem = () => {
+const CartItem = ({ product }) => {
+  const { id, title, price, image01, quantity, totalPrice } = product;
   return (
     <ListGroup className="border-0 cart__item">
       <div className="cart__item-info d-flex gap-2">
