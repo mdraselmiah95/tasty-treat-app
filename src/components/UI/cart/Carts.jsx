@@ -1,17 +1,25 @@
 import React from "react";
 import { ListGroup } from "reactstrap";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { cartUiAction } from "../../../store/shopping-cart/cartUiSlice";
 import CartItem from "./CartItem";
 
 //Style CSS
 import "../../../styles/shopping-cart.css";
 
 const Carts = () => {
+  const dispatch = useDispatch();
+
+  const toggleCart = () => {
+    dispatch(cartUiAction.toggle());
+  };
+
   return (
     <div className="cart__container">
       <ListGroup className="cart">
         <div className="cart__close">
-          <span>
+          <span onClick={toggleCart}>
             <i className="ri-close-fill"></i>
           </span>
         </div>
