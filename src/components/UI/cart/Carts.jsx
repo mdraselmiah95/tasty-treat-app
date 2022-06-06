@@ -10,7 +10,7 @@ import "../../../styles/shopping-cart.css";
 
 const Carts = () => {
   const dispatch = useDispatch();
-  const cartProducts = useSelector((state) => state.cart.CartItem);
+  const cartProducts = useSelector((state) => state.cart.cartItems);
 
   const toggleCart = () => {
     dispatch(cartUiAction.toggle());

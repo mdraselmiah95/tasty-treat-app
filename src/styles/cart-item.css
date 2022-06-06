@@ -1,6 +1,6 @@
 .cart__item-info img {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
 }
 
@@ -36,6 +36,6 @@
 }
 
 .cart__item {
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
   border-bottom: 1px solid #fde4e4;
 }
