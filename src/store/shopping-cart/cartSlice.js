@@ -11,6 +11,7 @@ const cartSlice = {
   initialState,
 
   reducers: {
+    // =========== add item ============
     addItem(state, action) {
       const newItem = action.payload;
       const existingItem = state.cartItems.find(
@@ -26,6 +27,10 @@ const cartSlice = {
           quantity: 1,
           totalPrice: newItem.price,
         });
+      } else {
+        existingItem.quantity++;
+        existingItem.totalPrice =
+          Number(existingItem.totalPrice) + Number(newItem.price);
       }
     },
   },
