@@ -38,3 +38,6 @@ const cartSlice = {
     },
   },
 };
+
+export const cartActions = cartSlice.actions;
+export default cartSlice;
