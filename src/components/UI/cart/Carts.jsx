@@ -3,6 +3,9 @@ import { ListGroup } from "reactstrap";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 
+//Style CSS
+import "../../../styles/shopping-cart.css";
+
 const Carts = () => {
   return (
     <div className="cart__container">
@@ -14,6 +17,14 @@ const Carts = () => {
         </div>
         <div className="cart__item-list">
           <CartItem />
+        </div>
+        <div className="cart__bottom d-flex align-items-center justify-content-between">
+          <h6>
+            Subtotal : <span>$ 123</span>
+          </h6>
+          <button>
+            <Link to="/checkout">Checkout</Link>
+          </button>
         </div>
       </ListGroup>
     </div>
