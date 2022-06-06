@@ -1,7 +1,7 @@
 import React from "react";
 import { ListGroup } from "reactstrap";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartUiAction } from "../../../store/shopping-cart/cartUiSlice";
 import CartItem from "./CartItem";
 
@@ -10,6 +10,7 @@ import "../../../styles/shopping-cart.css";
 
 const Carts = () => {
   const dispatch = useDispatch();
+  const cartProducts = useSelector((state) => state.cart.CartItem);
 
   const toggleCart = () => {
     dispatch(cartUiAction.toggle());
@@ -24,6 +25,7 @@ const Carts = () => {
           </span>
         </div>
         <div className="cart__item-list">
+          {}
           <CartItem />
         </div>
         <div className="cart__bottom d-flex align-items-center justify-content-between">
