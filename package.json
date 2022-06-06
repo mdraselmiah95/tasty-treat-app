@@ -45,5 +45,8 @@
   },
   "resolutions": {
     "autoprefixer": "10.4.5"
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
   }
 }
