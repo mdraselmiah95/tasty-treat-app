@@ -11,5 +11,5 @@ const cartUiSlice = createSlice({
   },
 });
 
-export const cartAction = cartUiSlice.actions;
+export const cartUiAction = cartUiSlice.actions;
 export default cartUiSlice.reducer;
