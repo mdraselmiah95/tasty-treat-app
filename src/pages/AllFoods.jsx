@@ -3,6 +3,9 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 
+import products from "../assets/fake-data/products.js";
+import ProductCard from "../components/UI/product-card/ProductCard";
+
 const AllFoods = () => {
   return (
     <Helmet title="All Foods">
@@ -35,6 +38,10 @@ const AllFoods = () => {
                 </select>
               </div>
             </Col>
+
+            {products.map((item) => (
+              <ProductCard item={item} key={item.id} />
+            ))}
           </Row>
         </Container>
       </section>
