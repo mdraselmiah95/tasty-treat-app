@@ -42,6 +42,20 @@ const FoodDetails = () => {
                 <img src={image} alt="" className="w-100" />
               </div>
             </Col>
+
+            <Col lg="6" md="6">
+              <div className="single__product-content">
+                <h2 className="product__title mb-3">Pizza</h2>
+                <p className="product__price">
+                  Price: <span>$33</span>
+                </p>
+                <p className="category mb-5">
+                  Category: <span>3</span>
+                </p>
+
+                <button className="addTOCart__btn">Add to Cart</button>
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>
