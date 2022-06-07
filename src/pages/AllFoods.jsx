@@ -9,6 +9,7 @@ import ProductCard from "../components/UI/product-card/ProductCard";
 
 //Style CSS
 import "../styles/all-foods.css";
+import "../styles/pagination.css";
 
 const AllFoods = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -70,9 +71,9 @@ const AllFoods = () => {
               <ReactPaginate
                 pageCount={pageCount}
                 onPageChange={changePage}
-                previousLabel="Prev"
-                nextLabel="Next"
-                containerClassName="paginationBttn"
+                previousLabel={"Prev"}
+                nextLabel={"Next"}
+                containerClassName=" paginationBttns "
               />
             </div>
           </Row>
