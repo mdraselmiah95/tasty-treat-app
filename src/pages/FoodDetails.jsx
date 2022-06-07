@@ -7,14 +7,21 @@ import products from "../assets/fake-data/products";
 
 //Style CSS
 import "../styles/product-details.css";
+import ProductCard from "../components/UI/product-card/ProductCard";
 
 const FoodDetails = () => {
   const [tab, setTab] = useState("desc");
   const { id } = useParams();
 
+  //specific product details
   const product = products.find((product) => product.id === id);
   const [previewImg, setPreviewImg] = useState(product.image01);
   const { title, price, category, desc, image01 } = product;
+
+  //product related suggestion
+  const relatedProducts = products.filter(
+    (product) => category === product.category
+  );
 
   return (
     <Helmet title="Product Details">
@@ -141,6 +148,16 @@ const FoodDetails = () => {
                 </div>
               )}
             </Col>
+
+            <Col lg="12" className="mb-5 mt-4">
+              <h2 className="related__Product-title">You might also like</h2>
+            </Col>
+
+            {relatedProducts.map((item) => (
+              <Col lg="3" md="4" sm="6" xs="6" className="mb-4" key={item.id}>
+                <ProductCard item={item} />
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>
