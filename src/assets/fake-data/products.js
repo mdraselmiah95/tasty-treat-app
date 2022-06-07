@@ -57,7 +57,7 @@ const products = [
     image03: product_03_image_03,
     category: "Pizza",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Savour delicious Italian flavours baked and sealed into this gourmet pizza. Made with a crusty base-tomato pizza sauce and mozzarella cheese are laid on top and baked to perfection. Sprinkle our secret seasoning generously to intensify the flavours! 9-Inch Base, Mozzarella Cheese, Tomato Pizza Sauce, Oregano",
   },
 
   {
@@ -69,7 +69,7 @@ const products = [
     image03: product_04_image_03,
     category: "Pizza",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "A pizza loaded with crunchy onions, crisp capsicum, juicy tomatoes and jalapeno with a liberal sprinkling of exotic Mexican herbs.",
   },
 
   {
