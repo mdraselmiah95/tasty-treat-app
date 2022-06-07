@@ -54,6 +54,7 @@ const FoodDetails = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [product]);
+
   return (
     <Helmet title="Product Details">
       <CommonSection title={title} />
@@ -86,7 +87,7 @@ const FoodDetails = () => {
             </Col>
 
             <Col lg="4" md="4">
-              <div className="product__main-img">
+              <div className="product__main-img" style={{ cursor: "pointer" }}>
                 <img src={previewImg} alt="food-img" className="w-100" />
               </div>
             </Col>
@@ -124,7 +125,7 @@ const FoodDetails = () => {
 
               {tab === "desc" ? (
                 <div className="tab__content">
-                  <p>{desc}</p>
+                  <p style={{ textAlign: "justify" }}>{desc}</p>
                 </div>
               ) : (
                 <div className="tab__form mb-3">

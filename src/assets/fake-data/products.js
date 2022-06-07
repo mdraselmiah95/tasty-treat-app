@@ -33,7 +33,7 @@ const products = [
     image03: product_01_image_03,
     category: "Burger",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+    desc: "A delicious meat-free meal for any diet, Bengal Meat Chicken Burger Patties feature a spicy, chicken -style veggie chik patty with a crispy, crunchy breading outside and tender inside. These veggie patties provide a good source of protein and fiber. Stock this convenient resealable bag in the freezer for an exciting anytime meal you can easily prepare in an oven or microwave. Whether you're putting together a winning spread for game night, preparing a meal to share with the whole family, or just seeking a quick and convenient lunch or dinner.",
   },
 
   {
@@ -45,7 +45,7 @@ const products = [
     image03: product_02_image_03,
     category: "Pizza",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "To make the dough, mix the yeast in a small bowl with 2 tbsp warm water and 1 tbsp strong white flour. Leave somewhere warm to ‘sponge’ for 20 mins or so (this dissolves and activates the yeast). Tip the three flours into a large bowl and make a well in the centre. Pour in the sponged yeast, 1 tsp salt, sugar, oil and 290ml warm water, and mix to form a wet dough. Knead for 10 mins until satiny and elastic, then put in a clean bowl, cover with a cloth and leave to double in size for 2 1/2 - 3 hrs.",
   },
 
   {
