@@ -1,9 +1,10 @@
 import React from "react";
 import { Container } from "reactstrap";
+import "../../../styles/common-section.css";
 
 const CommonSection = (props) => {
   return (
-    <section>
+    <section className="common__section">
       <Container>
         <h2>{props.title}</h2>
       </Container>
