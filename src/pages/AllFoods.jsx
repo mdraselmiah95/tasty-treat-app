@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
@@ -10,6 +10,8 @@ import ProductCard from "../components/UI/product-card/ProductCard";
 import "../styles/all-foods.css";
 
 const AllFoods = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [productData, setProductData] = useState(products);
   return (
     <Helmet title="All Foods">
       <CommonSection title="All Foods" />
@@ -22,8 +24,8 @@ const AllFoods = () => {
                 <input
                   type="text"
                   placeholder="I'm looking for...."
-                  // value={searchTerm}
-                  // onChange={(e) => setSearchTerm(e.target.value)}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <span>
                   <i className="ri-search-line"></i>
@@ -42,11 +44,17 @@ const AllFoods = () => {
               </div>
             </Col>
 
-            {products.map((item) => (
-              <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mb-4">
-                <ProductCard item={item} />
-              </Col>
-            ))}
+            {productData
+              ?.filter((item) => {
+                if (searchTerm.value === "") return item;
+                if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+                  return item;
+              })
+              .map((item) => (
+                <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mb-4">
+                  <ProductCard item={item} />
+                </Col>
+              ))}
           </Row>
         </Container>
       </section>
