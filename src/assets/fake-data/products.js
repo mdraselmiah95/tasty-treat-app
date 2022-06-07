@@ -145,14 +145,14 @@ const products = [
 
   {
     id: "11",
-    title: "Crunchy Bread ",
+    title: "Crunchy Bread",
     price: 35.0,
     image01: product_06_image_01,
     image02: product_06_image_02,
     image03: product_06_image_03,
     category: "Bread",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "We thought we’d landed upon the simplest yeast bread recipe when Mark Bittman wrote about the no-knead approach of Jim Lahey, owner of Sullivan Street Bakery. It quickly became (and remains) one of our most popular recipes because it made bakery-quality bread a real possibility for home cooks. But then we heard about Jeff Hertzberg, a physician from Minneapolis, who devised a streamlined technique for a crusty loaf of bread. Mix flour, salt, yeast, and water. Let it sit a bit, refrigerate it, take some out and let it rise, then bake it. The crusty, full-flavored loaf that results may be the world’s easiest yeast bread. ",
   },
 
   {
@@ -164,7 +164,7 @@ const products = [
     image03: product_06_image_03,
     category: "Bread",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "In a large bowl, combine 1-1/2 cups of flour, sugar, yeast, and salt. Add water and 2 tablespoons butter; beat on medium speed for 3 minutes or until smooth. Stir in cheese and enough remaining flour to form a soft dough. Turn onto a lightly floured surface; knead until smooth and elastic, about 4-6 minutes. Cover and let rest for 10 minutes. Divide into 13 pieces. Shape each into a ball. Place in a greased 9-in. round baking pan. Cover and let rise in a warm place until doubled, about 30 minutes.",
   },
 
   {
@@ -176,7 +176,7 @@ const products = [
     image03: product_06_image_03,
     category: "Bread",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Proof the yeast: In a large bowl or stand mixer add the yeast, water, and a pinch of the sugar or honey. Allow resting for 5-10 minutes until foaming and bubbly. (This is called “proofing” the yeast, to make sure it is active. If it doesn’t foam, the yeast is no good, and you need to start over with fresh yeast). Prepare the dough: Add remaining sugar or honey, salt, oil, and 3 cups of flour. Mix to combine. Add another cup of flour and mix to combine. With the mixer running add more flour, ½ cup at a time, until the dough begins to pull away from the sides of the bowl.",
   },
 ];
 
