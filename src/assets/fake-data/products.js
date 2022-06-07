@@ -116,7 +116,7 @@ const products = [
     image03: product_03_image_03,
     category: "Pizza",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Divide the dough into 4 portions. On a floured surface, roll each portion into a thin disc about 25 cm (10 inches) across. Sprinkle a small amount of cornmeal on a pizza peel and the hot stone. Place 1 disc at a time on the peel. Working quickly, spread with 1/4 of the peppers. Top with 1/4 of the cheese and chorizo. Drizzle with olive oil. Immediately slide the pizza onto the stone and bake until the dough is golden brown, 8 to 10 minutes. Top with herbs and a few grindings of pepper.",
   },
 
   {
@@ -128,7 +128,7 @@ const products = [
     image03: product_04_image_03,
     category: "Pizza",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Pepperoni is America’s favorite pizza. And adding mushrooms elevates its flavor, texture, and protein factor. This recipe uses dough made from scratch. The yeast isn’t bloomed in the video, but it’s a good idea to add that step and avoid wasting an entire batch of dough. The raw red sauce is just grated tomatoes, tomato paste, and basil. Use slim mushroom slices.",
   },
 
   {
@@ -140,7 +140,7 @@ const products = [
     image03: product_05_image_03,
     category: "Burger",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "A hamburger is an extremely popular sandwich consisting of one or more meat patties placed in a bun or a bread roll. The meat is usually accompanied by various ingredients such as tomato slices, onions, pickles, or lettuce, and numerous condiments such as mayonnaise, ketchup, or salsa.If a hamburger is served with cheese, it is then called a cheeseburger. Today, there is a large number of hamburger varieties throughout the world, each with its own accompaniments, served at numerous fast food restaurants.",
   },
 
   {
