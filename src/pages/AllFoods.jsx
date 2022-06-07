@@ -6,6 +6,9 @@ import CommonSection from "../components/UI/common-section/CommonSection";
 import products from "../assets/fake-data/products.js";
 import ProductCard from "../components/UI/product-card/ProductCard";
 
+//Style CSS
+import "../styles/all-foods.css";
+
 const AllFoods = () => {
   return (
     <Helmet title="All Foods">
