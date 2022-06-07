@@ -15,21 +15,26 @@ const AllFoods = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   //Search Product
-  const searchProduct = products.filter((item) => {
-    if (searchTerm.value === "") return item;
-    if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+  const searchedProduct = products.filter((item) => {
+    if (searchTerm.value === "") {
       return item;
+    }
+    if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return item;
+    } else {
+      return console.log("not found");
+    }
   });
 
   //React Paginate
   const [pageNumber, setPageNumber] = useState("");
   const productPerPage = 8;
   const visitedPage = pageNumber * productPerPage;
-  const displayPage = searchProduct.slice(
+  const displayPage = searchedProduct.slice(
     visitedPage,
     visitedPage + productPerPage
   );
-  const pageCount = Math.ceil(searchProduct.length / productPerPage);
+  const pageCount = Math.ceil(searchedProduct.length / productPerPage);
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
