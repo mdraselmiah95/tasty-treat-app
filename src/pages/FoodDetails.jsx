@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 import products from "../assets/fake-data/products";
@@ -144,7 +145,7 @@ const FoodDetails = () => {
                     <p className="user__email">robert@gmail.com</p>
                     <p className="feedback__text">Cool testy product</p>
                   </div>
-                  <form className="form">
+                  <form className="form" onSubmit={submitHandler}>
                     <div className="form__group">
                       <input
                         type="text"
