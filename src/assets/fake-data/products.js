@@ -81,7 +81,7 @@ const products = [
     image03: product_05_image_03,
     category: "Burger",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty. The cheese is usually added to the cooking hamburger patty shortly before serving, which allows the cheese to melt. Cheeseburgers can include variations in structure, ingredients and composition.",
   },
   {
     id: "06",
@@ -92,7 +92,7 @@ const products = [
     image03: product_01_image_03,
     category: "Burger",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "It's mighty simple, but it works. 100% quarter pounder beef patty, then complete the tasty picture with cheese, onions, tangy mustard and pickles. Bet your mouth is watering right now! It's mighty simple, but it works.",
   },
 
   {
@@ -104,7 +104,7 @@ const products = [
     image03: product_02_image_03,
     category: "Pizza",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Preheat oven to 200°C. Place pizza bases onto baking trays. Spread each with tomato paste and sprinkle with mozzarella. Bake in preheated oven for 5 minutes or until heated through.Combine marinara, garlic and parsley. Arrange over pizza bases with tomato. Drizzle with oil and season with salt and pepper. Bake in oven for a further 8 minutes or until seafood is cooked. Remove from oven and cut into wedges. Serve with rocket.",
   },
 
   {
