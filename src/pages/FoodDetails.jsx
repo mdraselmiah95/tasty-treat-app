@@ -23,6 +23,13 @@ const FoodDetails = () => {
     (product) => category === product.category
   );
 
+  useEffect(() => {
+    setPreviewImg(product.image01);
+  }, [product]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [product]);
   return (
     <Helmet title="Product Details">
       <CommonSection title={title} />
