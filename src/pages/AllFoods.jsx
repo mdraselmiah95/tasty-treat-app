@@ -19,7 +19,7 @@ const AllFoods = () => {
   const visitedPage = pageNumber * productPerPage;
   const displayPage = products.slice(visitedPage, visitedPage + productPerPage);
   const pageCount = Math.ceil(products.length / productPerPage);
-  const changedPage = ({ selected }) => {
+  const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
 
@@ -55,7 +55,7 @@ const AllFoods = () => {
               </div>
             </Col>
 
-            {products
+            {displayPage
               ?.filter((item) => {
                 if (searchTerm.value === "") return item;
                 if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -66,6 +66,15 @@ const AllFoods = () => {
                   <ProductCard item={item} />
                 </Col>
               ))}
+            <div>
+              <ReactPaginate
+                pageCount={pageCount}
+                onPageChange={changePage}
+                previousLabel="Prev"
+                nextLabel="Next"
+                containerClassName="paginationBttn"
+              />
+            </div>
           </Row>
         </Container>
       </section>
