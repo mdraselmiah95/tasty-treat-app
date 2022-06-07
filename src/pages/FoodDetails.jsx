@@ -4,6 +4,8 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 
 import image from "../assets/images/product_01.1.jpg";
+//Style CSS
+import "../styles/product-details.css";
 
 const FoodDetails = () => {
   return (
