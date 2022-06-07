@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
@@ -11,7 +12,17 @@ import "../styles/all-foods.css";
 
 const AllFoods = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [productData, setProductData] = useState(products);
+
+  //React Paginate
+  const [pageNumber, setPageNumber] = useState("");
+  const productPerPage = 8;
+  const visitedPage = pageNumber * productPerPage;
+  const displayPage = products.slice(visitedPage, visitedPage + productPerPage);
+  const pageCount = Math.ceil(products.length / productPerPage);
+  const changedPage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
   return (
     <Helmet title="All Foods">
       <CommonSection title="All Foods" />
@@ -44,7 +55,7 @@ const AllFoods = () => {
               </div>
             </Col>
 
-            {productData
+            {products
               ?.filter((item) => {
                 if (searchTerm.value === "") return item;
                 if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
