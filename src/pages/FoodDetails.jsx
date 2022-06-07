@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
+import { useParams } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
+import products from "../assets/fake-data/products";
 
-import image from "../assets/images/product_01.1.jpg";
 //Style CSS
 import "../styles/product-details.css";
 
 const FoodDetails = () => {
+  const [tab, setTab] = useState("desc");
+  const { id } = useParams();
+
+  const product = products.find((product) => product.id === id);
+  const [previewImg, setPreviewImg] = useState(product.image01);
+
   return (
     <Helmet title="Product Details">
       <CommonSection title="product 01" />
@@ -19,29 +26,29 @@ const FoodDetails = () => {
               <div className="product__images ">
                 <div
                   className="img__item mb-3"
-                  // onClick={() => setPreviewImg(product.image01)}
+                  onClick={() => setPreviewImg(product.image01)}
                 >
-                  <img src={image} alt="" className="w-50" />
+                  <img src={product.image01} alt="food-img" className="w-50" />
                 </div>
                 <div
                   className="img__item mb-3"
-                  // onClick={() => setPreviewImg(product.image02)}
+                  onClick={() => setPreviewImg(product.image02)}
                 >
-                  <img src={image} alt="" className="w-50" />
+                  <img src={product.image02} alt="food-img" className="w-50" />
                 </div>
 
                 <div
                   className="img__item"
-                  // onClick={() => setPreviewImg(product.image03)}
+                  onClick={() => setPreviewImg(product.image03)}
                 >
-                  <img src={image} alt="" className="w-50" />
+                  <img src={product.image03} alt="food-img" className="w-50" />
                 </div>
               </div>
             </Col>
 
             <Col lg="4" md="4">
               <div className="product__main-img">
-                <img src={image} alt="" className="w-100" />
+                <img src={previewImg} alt="food-img" className="w-100" />
               </div>
             </Col>
 
@@ -73,21 +80,21 @@ const FoodDetails = () => {
 
               <div className="tab__form mb-3">
                 <div className="review pt-5">
-                  <p className="user__name mb-0">Jhon Doe</p>
-                  <p className="user__email">jhon1@gmail.com</p>
+                  <p className="user__name mb-0">Tom Hank</p>
+                  <p className="user__email">tom@gmail.com</p>
                   <p className="feedback__text">great product</p>
                 </div>
 
                 <div className="review">
-                  <p className="user__name mb-0">Jhon Doe</p>
-                  <p className="user__email">jhon1@gmail.com</p>
-                  <p className="feedback__text">great product</p>
+                  <p className="user__name mb-0">Chris Hemsworth</p>
+                  <p className="user__email">Hemsworth@gmail.com</p>
+                  <p className="feedback__text">Excellent product</p>
                 </div>
 
                 <div className="review">
-                  <p className="user__name mb-0">Jhon Doe</p>
-                  <p className="user__email">jhon1@gmail.com</p>
-                  <p className="feedback__text">great product</p>
+                  <p className="user__name mb-0">Robert Downey</p>
+                  <p className="user__email">robert@gmail.com</p>
+                  <p className="feedback__text">Cool testy product</p>
                 </div>
                 <form className="form">
                   <div className="form__group">
