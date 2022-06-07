@@ -13,6 +13,9 @@ import ProductCard from "../components/UI/product-card/ProductCard";
 
 const FoodDetails = () => {
   const [tab, setTab] = useState("desc");
+  const [enteredName, setEnteredName] = useState("");
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [reviewMsg, setReviewMsg] = useState("");
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -35,6 +38,12 @@ const FoodDetails = () => {
         image01,
       })
     );
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    console.log(enteredName, enteredEmail, reviewMsg);
   };
 
   useEffect(() => {
@@ -140,7 +149,7 @@ const FoodDetails = () => {
                       <input
                         type="text"
                         placeholder="Enter your name"
-                        // onChange={(e) => setEnteredName(e.target.value)}
+                        onChange={(e) => setEnteredName(e.target.value)}
                         required
                       />
                     </div>
@@ -149,7 +158,7 @@ const FoodDetails = () => {
                       <input
                         type="text"
                         placeholder="Enter your email"
-                        // onChange={(e) => setEnteredEmail(e.target.value)}
+                        onChange={(e) => setEnteredEmail(e.target.value)}
                         required
                       />
                     </div>
@@ -159,7 +168,7 @@ const FoodDetails = () => {
                         rows={5}
                         type="text"
                         placeholder="Write your review"
-                        // onChange={(e) => setReviewMsg(e.target.value)}
+                        onChange={(e) => setReviewMsg(e.target.value)}
                         required
                       />
                     </div>
