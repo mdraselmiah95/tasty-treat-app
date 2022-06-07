@@ -14,12 +14,22 @@ import "../styles/pagination.css";
 const AllFoods = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
+  //Search Product
+  const searchProduct = products.filter((item) => {
+    if (searchTerm.value === "") return item;
+    if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+      return item;
+  });
+
   //React Paginate
   const [pageNumber, setPageNumber] = useState("");
   const productPerPage = 8;
   const visitedPage = pageNumber * productPerPage;
-  const displayPage = products.slice(visitedPage, visitedPage + productPerPage);
-  const pageCount = Math.ceil(products.length / productPerPage);
+  const displayPage = searchProduct.slice(
+    visitedPage,
+    visitedPage + productPerPage
+  );
+  const pageCount = Math.ceil(searchProduct.length / productPerPage);
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
@@ -56,17 +66,11 @@ const AllFoods = () => {
               </div>
             </Col>
 
-            {displayPage
-              ?.filter((item) => {
-                if (searchTerm.value === "") return item;
-                if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
-                  return item;
-              })
-              .map((item) => (
-                <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mb-4">
-                  <ProductCard item={item} />
-                </Col>
-              ))}
+            {displayPage.map((item) => (
+              <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mb-4">
+                <ProductCard item={item} />
+              </Col>
+            ))}
             <div>
               <ReactPaginate
                 pageCount={pageCount}
