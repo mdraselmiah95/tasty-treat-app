@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 import products from "../assets/fake-data/products";
+import { cartActions } from "../store/shopping-cart/cartSlice";
 
 //Style CSS
 import "../styles/product-details.css";
@@ -12,6 +14,7 @@ import ProductCard from "../components/UI/product-card/ProductCard";
 const FoodDetails = () => {
   const [tab, setTab] = useState("desc");
   const { id } = useParams();
+  const dispatch = useDispatch();
 
   //specific product details
   const product = products.find((product) => product.id === id);
@@ -22,6 +25,17 @@ const FoodDetails = () => {
   const relatedProducts = products.filter(
     (product) => category === product.category
   );
+
+  const addItem = () => {
+    dispatch(
+      cartActions.addItem({
+        id,
+        title,
+        price,
+        image01,
+      })
+    );
+  };
 
   useEffect(() => {
     setPreviewImg(product.image01);
@@ -76,7 +90,9 @@ const FoodDetails = () => {
                 <p className="category mb-5">
                   Category: <span>{category}</span>
                 </p>
-                <button className="addTOCart__btn">Add to Cart</button>
+                <button className="addTOCart__btn" onClick={addItem}>
+                  Add to Cart
+                </button>
               </div>
             </Col>
 
