@@ -8,7 +8,15 @@ import CommonSection from "../components/UI/common-section/CommonSection";
 import "../styles/checkout.css";
 
 const Checkout = () => {
-  const cartTotalAmount = useSelector((state) => state.cart.cartTotalAmount);
+  const [enterName, setEnterName] = useState("");
+  const [enterEmail, setEnterEmail] = useState("");
+  const [enterNumber, setEnterNumber] = useState("");
+  const [enterCountry, setEnterCountry] = useState("");
+  const [enterCity, setEnterCity] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+
+  //calculating total amount
+  const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
   const shippingCost = 30;
   const totalAmount = cartTotalAmount + Number(shippingCost);
   return (
@@ -27,7 +35,7 @@ const Checkout = () => {
                     type="text"
                     placeholder="Enter your name"
                     required
-                    // onChange={(e) => setEnterName(e.target.value)}
+                    onChange={(e) => setEnterName(e.target.value)}
                   />
                 </div>
 
@@ -36,7 +44,7 @@ const Checkout = () => {
                     type="email"
                     placeholder="Enter your email"
                     required
-                    // onChange={(e) => setEnterEmail(e.target.value)}
+                    onChange={(e) => setEnterEmail(e.target.value)}
                   />
                 </div>
                 <div className="form__group">
@@ -44,7 +52,7 @@ const Checkout = () => {
                     type="number"
                     placeholder="Phone number"
                     required
-                    // onChange={(e) => setEnterNumber(e.target.value)}
+                    onChange={(e) => setEnterNumber(e.target.value)}
                   />
                 </div>
                 <div className="form__group">
@@ -52,7 +60,7 @@ const Checkout = () => {
                     type="text"
                     placeholder="Country"
                     required
-                    // onChange={(e) => setEnterCountry(e.target.value)}
+                    onChange={(e) => setEnterCountry(e.target.value)}
                   />
                 </div>
                 <div className="form__group">
@@ -60,7 +68,7 @@ const Checkout = () => {
                     type="text"
                     placeholder="City"
                     required
-                    // onChange={(e) => setEnterCity(e.target.value)}
+                    onChange={(e) => setEnterCity(e.target.value)}
                   />
                 </div>
                 <div className="form__group">
@@ -68,7 +76,7 @@ const Checkout = () => {
                     type="number"
                     placeholder="Postal code"
                     required
-                    // onChange={(e) => setPostalCode(e.target.value)}
+                    onChange={(e) => setPostalCode(e.target.value)}
                   />
                 </div>
                 <button type="submit" className="addTOCart__btn">
