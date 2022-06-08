@@ -16,9 +16,25 @@ const Checkout = () => {
   const [postalCode, setPostalCode] = useState("");
 
   //calculating total amount
+  const shippingInfo = [];
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
   const shippingCost = 30;
   const totalAmount = cartTotalAmount + Number(shippingCost);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const userShippingAddress = {
+      name: enterName,
+      email: enterEmail,
+      phone: enterNumber,
+      country: enterCountry,
+      city: enterCity,
+      postalCode: postalCode,
+    };
+
+    shippingInfo.push(userShippingAddress);
+    console.log(shippingInfo);
+  };
   return (
     <Helmet title="Checkout">
       <CommonSection title="Checkout" />
@@ -29,7 +45,7 @@ const Checkout = () => {
             <Col lg="8" md="6">
               <h6 className="mb-4">Shipping Address</h6>
 
-              <form className="checkout__form">
+              <form className="checkout__form" onSubmit={submitHandler}>
                 <div className="form__group">
                   <input
                     type="text"
