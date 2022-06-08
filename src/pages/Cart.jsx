@@ -8,7 +8,8 @@ import CommonSection from "../components/UI/common-section/CommonSection";
 import "../styles/cart-page.css";
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state.cart.cartItem);
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  //  const totalAmount = useSelector((state) => state.cart.totalAmount);
   return (
     <Helmet title="Cart">
       <CommonSection title="Your Cart" />
@@ -30,7 +31,6 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <Tr />
                     {cartItems.map((item) => (
                       <Tr item={item} key={item.id} />
                     ))}
@@ -45,8 +45,8 @@ const Cart = () => {
   );
 };
 
-const Tr = (props) => {
-  const { id, image01, title, price, quantity } = props.item;
+const Tr = ({ item }) => {
+  const { id, image01, title, price, quantity } = item;
   // const dispatch = useDispatch();
 
   // const deleteItem = () => {
@@ -55,8 +55,7 @@ const Tr = (props) => {
   return (
     <tr>
       <td className="text-center cart__img-box">
-        <img src={image01} alt="cart-img" />
-        img
+        <img src={image01} alt="" />
       </td>
       <td className="text-center">{title}</td>
       <td className="text-center">${price}</td>
