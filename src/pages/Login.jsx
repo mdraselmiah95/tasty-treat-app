@@ -10,6 +10,10 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    const password = loginNameRef.current.value;
+    const email = loginPasswordRef.current.value;
+    const loginInfo = { email, password };
+    console.log(loginInfo);
   };
   return (
     <Helmet title="Login">
