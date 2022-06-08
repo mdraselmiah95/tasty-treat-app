@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
+import { cartActions } from "../store/shopping-cart/cartSlice";
 
 //Style CSS
 import "../styles/cart-page.css";
@@ -47,11 +48,11 @@ const Cart = () => {
 
 const Tr = ({ item }) => {
   const { id, image01, title, price, quantity } = item;
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const deleteItem = () => {
-  //   dispatch(cartActions.deleteItem(id));
-  // };
+  const deleteItem = () => {
+    dispatch(cartActions.deleteItem(id));
+  };
   return (
     <tr>
       <td className="text-center cart__img-box">
@@ -61,7 +62,7 @@ const Tr = ({ item }) => {
       <td className="text-center">${price}</td>
       <td className="text-center">{quantity}px</td>
       <td className="text-center cart__item-del">
-        <i className="ri-delete-bin-line"></i>
+        <i className="ri-delete-bin-line" onClick={deleteItem}></i>
       </td>
     </tr>
   );
