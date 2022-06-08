@@ -23,16 +23,17 @@ const Checkout = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const userShippingAddress = {
+    const userAllInformation = {
       name: enterName,
       email: enterEmail,
       phone: enterNumber,
       country: enterCountry,
       city: enterCity,
       postalCode: postalCode,
+      amount: totalAmount,
     };
 
-    shippingInfo.push(userShippingAddress);
+    shippingInfo.push(userAllInformation);
     console.log(shippingInfo);
   };
   return (
