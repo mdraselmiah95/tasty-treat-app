@@ -16,6 +16,8 @@
 body {
   background: #fcfcfc !important;
   font-family: "Istok Web", sans-serif !important;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1,
