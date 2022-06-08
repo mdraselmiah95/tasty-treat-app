@@ -18,7 +18,7 @@ const Login = () => {
         <Container>
           <Row>
             <Col lg="6" md="6" sm="12" className="m-auto text-center">
-              <form className="form mb-5" onClick={submitHandler}>
+              <form className="form mb-5" onSubmit={submitHandler}>
                 <div className="form__group">
                   <input
                     type="email"
