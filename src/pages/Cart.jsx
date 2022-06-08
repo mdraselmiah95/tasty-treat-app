@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
@@ -10,7 +11,7 @@ import "../styles/cart-page.css";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
-  //  const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
   return (
     <Helmet title="Cart">
       <CommonSection title="Your Cart" />
@@ -38,6 +39,22 @@ const Cart = () => {
                   </tbody>
                 </table>
               )}
+
+              <div className="mt-4">
+                <h6>
+                  Subtotal: $
+                  <span className="cart__subtotal">{totalAmount}</span>
+                </h6>
+                <p>Taxes and shipping will calculate at checkout</p>
+                <div className="cart__page-btn">
+                  <button className="addTOCart__btn me-4">
+                    <Link to="/foods">Continue Shopping</Link>
+                  </button>
+                  <button className="addTOCart__btn">
+                    <Link to="/checkout">Proceed to checkout</Link>
+                  </button>
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>
