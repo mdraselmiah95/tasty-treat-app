@@ -8,6 +8,9 @@ import CommonSection from "../components/UI/common-section/CommonSection";
 import "../styles/checkout.css";
 
 const Checkout = () => {
+  const cartTotalAmount = useSelector((state) => state.cart.cartTotalAmount);
+  const shippingCost = 30;
+  const totalAmount = cartTotalAmount + Number(shippingCost);
   return (
     <Helmet title="Checkout">
       <CommonSection title="Checkout" />
@@ -72,6 +75,22 @@ const Checkout = () => {
                   Payment
                 </button>
               </form>
+            </Col>
+
+            <Col lg="4" md="6">
+              <div className="checkout__bill">
+                <h6 className="d-flex align-items-center justify-content-between mb-3">
+                  Subtotal: <span>${cartTotalAmount}</span>
+                </h6>
+                <h6 className="d-flex align-items-center justify-content-between mb-3">
+                  Shipping: <span>${shippingCost}</span>
+                </h6>
+                <div className="checkout__total">
+                  <h5 className="d-flex align-items-center justify-content-between">
+                    Total: <span>${totalAmount}</span>
+                  </h5>
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>
