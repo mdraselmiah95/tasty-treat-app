@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 
 const Login = () => {
+  const loginNameRef = useRef();
+  const loginPasswordRef = useRef();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
   return (
     <Helmet title="Login">
       <CommonSection title="Login" />
@@ -12,13 +18,13 @@ const Login = () => {
         <Container>
           <Row>
             <Col lg="6" md="6" sm="12" className="m-auto text-center">
-              <form className="form mb-5">
+              <form className="form mb-5" onClick={submitHandler}>
                 <div className="form__group">
                   <input
                     type="email"
                     placeholder="Email"
                     required
-                    // ref={loginNameRef}
+                    ref={loginNameRef}
                   />
 
                   <div className="form__group">
@@ -26,7 +32,7 @@ const Login = () => {
                       type="password"
                       placeholder="Password"
                       required
-                      // ref={loginPasswordRef}
+                      ref={loginPasswordRef}
                     />
                   </div>
                   <button type="submit" className="addTOCart__btn">
