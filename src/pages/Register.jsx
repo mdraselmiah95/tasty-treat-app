@@ -13,8 +13,8 @@ const Register = () => {
     e.preventDefault();
   };
   return (
-    <Helmet title="Signup">
-      <CommonSection title="Signup" />
+    <Helmet title="Sign Up">
+      <CommonSection title="Sign Up" />
       <section>
         <Container>
           <Row>
