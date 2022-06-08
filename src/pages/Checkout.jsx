@@ -4,6 +4,9 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 
+//Style CSS
+import "../styles/checkout.css";
+
 const Checkout = () => {
   return (
     <Helmet title="Checkout">
