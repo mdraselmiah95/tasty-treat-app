@@ -11,6 +11,11 @@ const Register = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    const name = signupNameRef.current.value;
+    const password = signupPasswordRef.current.value;
+    const email = signupEmailRef.current.value;
+    const registerInfo = { name, email, password };
+    console.log(registerInfo);
   };
   return (
     <Helmet title="Sign Up">
