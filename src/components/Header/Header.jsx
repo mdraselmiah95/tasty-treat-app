@@ -9,7 +9,6 @@ import logo from "../../assets/images/res-logo.png";
 import "../../styles/header.css";
 import { cartUiAction } from "../../store/shopping-cart/cartUiSlice";
 initializeFirebase();
-const provider = new GoogleAuthProvider();
 
 const nav__links = [
   {
@@ -60,9 +59,20 @@ const Header = () => {
 
   //sign in with Google
 
-  const auth = getAuth();
+  const googleProvider = new GoogleAuthProvider();
 
-  const handleGoogleSignIn = () => {};
+  const handleGoogleSignIn = () => {
+    const auth = getAuth();
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  };
 
   return (
     <header className="header" ref={headerRef}>
