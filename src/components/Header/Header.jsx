@@ -2,13 +2,10 @@ import React, { useRef, useEffect } from "react";
 import { Container } from "reactstrap";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import initializeFirebase from "../../firebase/firebase.init";
 
 import logo from "../../assets/images/res-logo.png";
 import "../../styles/header.css";
 import { cartUiAction } from "../../store/shopping-cart/cartUiSlice";
-initializeFirebase();
 
 const nav__links = [
   {
@@ -57,23 +54,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", null);
   }, []);
 
-  //sign in with Google
-
-  const googleProvider = new GoogleAuthProvider();
-
-  const handleGoogleSignIn = () => {
-    const auth = getAuth();
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
-  };
-
   return (
     <header className="header" ref={headerRef}>
       <Container>
@@ -117,9 +97,6 @@ const Header = () => {
             <span className="mobile__menu" onClick={toggleMenu}>
               <i className="ri-menu-line"></i>
             </span>
-            <div>
-              <button onClick={handleGoogleSignIn}>Go</button>
-            </div>
           </div>
         </div>
       </Container>
